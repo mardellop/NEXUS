@@ -1,3 +1,84 @@
+/* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2e8aa3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    z-index: 2;
+}
+
+.preloader-logo {
+    width: 200px; /* Smaller as now we add text below */
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+    animation: preloaderEntrance 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.preloader-brand-name {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: -10px;
+    opacity: 0;
+    animation: preloaderEntrance 1s cubic-bezier(0.23, 1, 0.32, 1) forwards 0.4s;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+@keyframes preloaderEntrance {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.preloader-bar {
+    width: 140px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.03);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.preloader-bar::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #2e8aa3, transparent);
+    animation: loadingProgress 2s ease-in-out forwards;
+}
+
+@keyframes loadingProgress {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -104,6 +185,64 @@ body {
 
 .nav a:hover:not(.btn-primary-small) {
     color: var(--text-dark);
+}
+
+/* Dropdown Menu Styles */
+.nav-item-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    min-width: 180px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-light) !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: rgba(46, 138, 163, 0.08);
+    color: #2e8aa3 !important;
+    padding-left: 24px;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
 }
 
 .btn-primary-small {
@@ -580,6 +719,13 @@ body {
     justify-content: center;
     color: white;
     font-weight: 600;
+    overflow: hidden; /* Added to contain images */
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .author-avatar.elena { background: #8b5cf6; }
@@ -1511,7 +1657,7 @@ body {
 
 /* Metrics Banner */
 .metrics-banner {
-    background: linear-gradient(90deg, #cffafe, #a5f3fc);
+    background: linear-gradient(90deg, #BAF0FFFF, #3cb3d3);
     border: 1px solid rgba(6, 182, 212, 0.3);
     border-radius: 16px;
     padding: 40px;
@@ -1529,14 +1675,14 @@ body {
 .metric-item h3 {
     font-size: 40px;
     font-weight: 800;
-    color: #083344;
+    color: #000;
     margin-bottom: 8px;
     line-height: 1;
 }
 
 .metric-item p {
     font-size: 14px;
-    color: #164e63;
+    color: #000;
     font-weight: 500;
 }
 
@@ -1589,13 +1735,17 @@ body {
 }
 
 .faq-badge {
-    color: var(--primary);
+    background-color: #2e8aa3;
+    color: white;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    display: block;
-    margin-bottom: 16px;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(46, 138, 163, 0.2);
 }
 
 .faq-header-new .section-title {
@@ -1679,6 +1829,7 @@ body {
     color: #000;
     line-height: 1.6;
     font-size: 15px;
+    text-align: justify;
 }
 
 /* Fix newsletter positioning */
@@ -2533,8 +2684,9 @@ body {
     position: absolute;
     bottom: 80px;
     right: 0;
-    width: 380px;
-    height: 550px;
+    width: 350px;
+    height: 480px;
+    max-height: calc(90vh - 100px);
     background: white;
     border-radius: 24px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
@@ -2662,4 +2814,3 @@ body {
         height: 70vh;
     }
 }
-
