@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con nosotros | NEXUS SEAMLESS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;700&family=Michroma&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/mardellop/NEXUS/main/Logo%20Nexus%20S.png">
+    <style>
+        .job-offer-card {
+            background: white;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            transition: transform 0.35s ease, border-color 0.35s ease,
+                        box-shadow 0.35s ease, background 0.35s ease;
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .job-offer-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #06b6d4, #3cb3d3);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+            border-radius: 24px 24px 0 0;
+        }
+
+        .job-offer-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(6, 182, 212, 0.6);
+            box-shadow: 0 24px 48px rgba(6, 182, 212, 0.12),
+                        0 8px 16px rgba(0, 0, 0, 0.06);
+            background: linear-gradient(to bottom, rgba(6, 182, 212, 0.03), white);
+        }
+
+        .job-offer-card:hover::before {
+            transform: scaleX(1);
+        }
+    </style>
+    <link rel="stylesheet" href="reserve-modal.css">
+</head>
+<body style="padding-top: 80px;">
+    <div class="bg-gradient"></div>
+    <div class="grid-overlay"></div>
+    
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/mardellop/NEXUS/main/Logo%20Nexus%20S.png" alt="NEXUS S" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="nav-item-dropdown">
+                    <a href="javascript:void(0)" style="cursor: default;">Nuestra empresa<span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#about" class="dropdown-item">Sobre nosotros</a></li>
+                        <li><a href="equipo.html" class="dropdown-item">Equipo</a></li>
+                        <li><a href="blog.html" class="dropdown-item">Noticias</a></li>
+                        <li><a href="trabaja-con-nosotros.html" class="dropdown-item">Trabaja con nostros</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="javascript:void(0)" style="cursor: default;">Producto <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="especificaciones.html" class="dropdown-item">Especificaciones</a></li>
+                        <li><a href="demo.html" class="dropdown-item">Demo</a></li>
+                        <li><a href="nexusos-core.html" class="dropdown-item">NexusOS Core</a></li>
+
+                    </ul>
+                </div>
+                <a href="blog.html">Blog</a>
+                <a href="faq.html">FAQ</a>
+                <a href="testimonios.html">Testimonios</a>
+                <a href="index.html#preregister" class="btn-primary-small">Reservar Ahora</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main>
+        <section id="careers" class="careers-section" style="max-width: 900px; margin: 0 auto; padding: 60px 24px 100px;">
+            <div class="faq-header-new" style="text-align: center; margin-bottom: 60px;">
+            <h1 style="font-size: 56px; font-weight: 800; color: #000; margin-bottom: 24px; font-family: 'Orbitron', sans-serif; letter-spacing: -1px;">Trabaja con nosotros</h1>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 30px; margin-bottom: 80px;">
+                <p style="font-size: 18px; line-height: 1.8; color: #000; text-align: justify;">En NEXUS SEAMLESS, no contratamos para cubrir puestos; buscamos mentes capaces de cuestionar la rigidez del mundo actual. Si crees que el hardware no debería ser un ancla, sino una extensión del movimiento humano, este es tu lugar.</p>
+                
+                <p style="font-size: 18px; line-height: 1.8; color: #000; text-align: justify;">La verdad es que aquí no construimos ordenadores, diseñamos libertad. Trabajamos con grafeno, titanio y polímeros electroactivos para que la tecnología deje de ser algo que se "lleva a cuestas" y pase a ser algo que fluye contigo. No buscamos la perfección de un ciclo de dos años, sino la excelencia que dura décadas.</p>
+                
+                <p style="font-size: 18px; line-height: 1.8; color: #000; text-align: justify;">Si te apasiona la física aplicada, la energía inalámbrica y los sistemas sin fricciones, queremos que tu talento se enrolle con nuestra visión.</p>
+            </div>
+
+            <h3 style="font-size: 32px; margin-bottom: 40px; color: #000; text-align: center;">Puestos de trabajo disponibles</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr; gap: 32px;">
+                <div class="job-offer-card">
+                    <h4 style="font-size: 22px; color: #06b6d4; font-family: 'Orbitron', sans-serif; margin-bottom: 8px;">1. Ingeniero de materiales avanzados (Especialista en grafeno)</h4>
+                    <p style="font-weight: 600; color: #000; margin-bottom: 16px; font-size: 15px;">Departamento: I+D de hardware.</p>
+                    <p style="font-size: 16px; line-height: 1.8; color: #000; text-align: justify;">Buscamos a alguien que no vea una lámina de carbono, sino un lienzo infinito. Te encargarás de optimizar la integridad estructural de nuestras pantallas monocapa. Si los nanotubos de carbono son tu lenguaje nativo, queremos hablar contigo.</p>
+                </div>
+
+                <div class="job-offer-card">
+                    <h4 style="font-size: 22px; color: #06b6d4; font-family: 'Orbitron', sans-serif; margin-bottom: 8px;">2. Desarrollador de ecosistemas</h4>
+                    <p style="font-weight: 600; color: #000; margin-bottom: 16px; font-size: 15px;">Departamento: Software & UX.</p>
+                    <p style="font-size: 16px; line-height: 1.8; color: #000; text-align: justify;">Tu misión será que la interfaz de NexusOS Core se adapte al entorno con la misma fluidez que el hardware se adhiere a una pared. Necesitamos a alguien capaz de diseñar una experiencia de usuario táctil y háptica que se sienta natural, eliminando cualquier rastro de fricción digital.</p>
+                </div>
+
+                <div class="job-offer-card">
+                    <h4 style="font-size: 22px; color: #06b6d4; font-family: 'Orbitron', sans-serif; margin-bottom: 8px;">3. Especialista en captura energética RF</h4>
+                    <p style="font-weight: 600; color: #000; margin-bottom: 16px; font-size: 15px;">Departamento: Ingeniería de la energía.</p>
+                    <p style="font-size: 16px; line-height: 1.8; color: #000; text-align: justify;">¿Te fascina la radio-inducción ambiental? Serás el responsable de que NEXUS SEAMLESS siga alimentándose de las ondas 5G y Wi-Fi del entorno, garantizando una autonomía que desafíe los límites de la carga tradicional. Ayúdanos a que el usuario se olvide de que los cables existieron alguna vez.</p>
+                </div>
+
+                <div class="job-offer-card">
+                    <h4 style="font-size: 22px; color: #06b6d4; font-family: 'Orbitron', sans-serif; margin-bottom: 8px;">4. Estratega de sostenibilidad y ciclo de vida</h4>
+                    <p style="font-weight: 600; color: #000; margin-bottom: 16px; font-size: 15px;">Departamento: Operaciones y ética material.</p>
+                    <p style="font-size: 16px; line-height: 1.8; color: #000; text-align: justify;">En NEXUS odiamos la obsolescencia. Buscamos a un perfil que garantice que cada miligramo de titanio y polímero sea 100% recuperable, cumpliendo con los protocolos de residuos cero más estrictos del planeta.</p>
+                </div>
+            </div>
+
+            <!-- Botón para revelar el formulario -->
+            <div style="text-align: center; margin-top: 60px;">
+                <button id="open-form-btn" onclick="openApplicationForm()" class="btn-cyan-full" style="padding: 16px 48px; border-radius: 10px; font-family: 'Orbitron', sans-serif; font-size: 16px; letter-spacing: 1px;">
+                    QUIERO TRABAJAR CON NEXUS SEAMLESS
+                </button>
+            </div>
+        </section>
+    
+        <section id="application-form-section" style="max-width: 900px; margin: 0 auto 100px; padding: 0 24px; display: none; opacity: 0; transition: opacity 0.5s ease;">
+            <div style="background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.2); padding: 50px; border-radius: 24px;">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h2 class="section-title">Formulario</h2>
+                </div>
+
+                <form id="careers-form" onsubmit="return submitApplication(event)">
+                    <!-- 1. Un poco sobre ti -->
+                    <h4 style="font-size: 20px; font-family: 'Orbitron', sans-serif; color: #000; margin-bottom: 20px;">1. Un poco sobre ti</h4>
+                    
+                    <div class="form-group-custom" style="margin-bottom: 20px;">
+                        <label>Nombre y apellidos</label>
+                        <input type="text" placeholder="(Como aparecen en tu DNI)" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Inter', sans-serif;">
+                    </div>
+                    
+                    <div class="form-group-custom" style="margin-bottom: 40px;">
+                        <label>Proyectos que has realizado</label>
+                        <input type="url" placeholder="(URL de tu LinkedIn, portfolio en Notion o GitHub, etc.)" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Inter', sans-serif;">
+                    </div>
+
+                    <!-- 2. Especialización de Núcleo -->
+                    <h4 style="font-size: 20px; font-family: 'Orbitron', sans-serif; color: #000; margin-bottom: 20px;">2. Oferta de trabajo a aplicar</h4>
+                    <div class="form-group-custom" style="margin-bottom: 40px;">
+                        <label>Selecciona la oferta de trabajo que más resuena contigo</label>
+                        <select required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Inter', sans-serif; background: #fff;">
+                            <option value="">Selecciona una opción...</option>
+                            <option value="hardware">Arquitectura de Grafeno y Nanotubos (Hardware).</option>
+                            <option value="software">Interfaz Adaptativa y NexOS (Software/UX).</option>
+                            <option value="energia">Ingeniería de Radio-Inducción Ambiental (Energía).</option>
+                            <option value="sostenibilidad">Recuperación de Materiales y Ciclo de Vida (Sostenibilidad).</option>
+                        </select>
+                    </div>
+
+                    <!-- 3. El Manifiesto Personal -->
+                    <h4 style="font-size: 20px; font-family: 'Orbitron', sans-serif; color: #000; margin-bottom: 20px;">3. Cuéntanos tus motivaciones</h4>
+                    <div class="form-group-custom" style="margin-bottom: 40px;">
+                        <label>¿Por qué quieres dejar de doblar la realidad?</label>
+                        <textarea rows="5" placeholder="(Cuéntanos en 200 palabras cómo tus proyectos han eliminado fricciones o qué límite de la termodinámica te obsesiona romper)" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
+                    </div>
+
+                    <!-- 4. Evidencia Técnica -->
+                    <h4 style="font-size: 20px; font-family: 'Orbitron', sans-serif; color: #000; margin-bottom: 20px;">4. Currículum</h4>
+                    <div class="form-group-custom" style="margin-bottom: 40px;">
+                        <label>Sube aquí tu currículum</label>
+                        <div style="border: 2px dashed #06b6d4; padding: 20px; border-radius: 8px; text-align: center; background: white;">
+                            <input type="file" required accept=".pdf,.doc,.docx,.zip" style="width: 100%; padding: 10px;">
+                            <p style="font-size: 13px; color: #666; margin-top: 10px;">(Aceptamos archivos de alta fidelidad. Peso máximo 10MB. Al igual que el titanio, buscamos ligereza y resistencia).</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Protocolo de Privacidad -->
+                    <h4 style="font-size: 20px; font-family: 'Orbitron', sans-serif; color: #000; margin-bottom: 20px;">5. Protocolo de privacidad</h4>
+                    <div class="form-group-custom" style="margin-bottom: 40px; display: flex; align-items: flex-start; gap: 12px;">
+                        <input type="checkbox" id="privacy-policy" required style="margin-top: 6px; transform: scale(1.2);">
+                        <label for="privacy-policy" style="font-size: 15px; color: #000; line-height: 1.5; font-weight: normal;">Confirmo que mis datos serán tratados bajo el Reglamento Global de Protección de Datos Cuánticos (GDPR-Q) y que mi talento es 100% recuperable para este proyecto.</label>
+                    </div>
+
+                    <button type="submit" class="btn-cyan-full" style="width: 100%; border-radius: 8px; font-family: 'Orbitron', sans-serif; font-size: 18px; padding: 16px;">ENVIAR FORMULARIO</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Confirmation Section (Hidden by Default) -->
+        <section id="confirmation-section" style="max-width: 900px; margin: 80px auto 100px; padding: 0 24px; display: none;">
+            <div style="background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.2); padding: 60px; border-radius: 24px; text-align: center;">
+                <div style="width: 80px; height: 80px; background: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                
+                <h2 class="section-title" style="margin-bottom: 16px;">Conexión Establecida</h2>
+                <h3 style="font-size: 22px; color: #000; margin-bottom: 30px; font-weight: 600;">Tu talento ya fluye con el núcleo de NEXUS SEAMLESS.</h3>
+                
+                <p style="font-size: 18px; line-height: 1.8; color: #000; text-align: justify; margin-bottom: 40px;">Gracias por compartir tu estructura con nosotros. Hemos recibido tus datos y, al igual que nuestra trama de memoria molecular, ya los estamos integrando en nuestro análisis de red.</p>
+                
+                <div style="text-align: left; background: white; padding: 30px; border-radius: 16px; margin-bottom: 40px; border: 1px solid #eee;">
+                    <h4 style="font-size: 20px; font-family: 'Orbitron', sans-serif; color: var(--primary); margin-bottom: 20px;">¿Qué ocurre ahora?</h4>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong style="color:#000;">Sincronización:</strong> Nuestro Arquitecto de Sistemas revisará cómo tu perfil se adhiere a nuestra visión de hardware sin fricciones.</p>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong style="color:#000;">Resonancia:</strong> Si detectamos una frecuencia común, nos pondremos en contacto contigo para una sesión de diseño y estrategia. No buscamos entrevistas rígidas, sino diálogos que fluyan.</p>
+                    <p style="font-size: 16px; line-height: 1.6;"><strong style="color:#000;">Latencia Cero:</strong> Odiamos las esperas innecesarias. Recibirás una actualización de nuestro estado en un ciclo máximo de 7 días naturales.</p>
+                </div>
+
+                <p style="font-size: 16px; line-height: 1.8; color: #000; margin-bottom: 30px;">Mientras tanto, te invitamos a seguir explorando <a href="blog.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">Seamless Soul</a>, nuestro blog, para entender mejor cómo estamos rediseñando los límites de la física aplicada.</p>
+                
+                <p style="font-size: 20px; font-style: italic; font-weight: 600; color: #111827; margin-bottom: 40px;">El futuro no se dobla, se enrolla. Y tú acabas de dar el primer giro.</p>
+                
+                <button onclick="window.location.href='index.html'" class="btn-cyan-full" style="padding: 14px 40px; border-radius: 8px; font-family: 'Orbitron', sans-serif; font-size: 16px; width: auto; display: inline-block;">VOLVER AL ORIGEN</button>
+            </div>
+        </section>
+
+        <script>
+            function openApplicationForm() {
+                const formSection = document.getElementById('application-form-section');
+                const btn = document.getElementById('open-form-btn');
+                formSection.style.display = 'block';
+                // Small delay to trigger CSS transition
+                setTimeout(() => {
+                    formSection.style.opacity = '1';
+                    formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 30);
+                // Hide the button after clicking
+                btn.parentElement.style.display = 'none';
+            }
+
+            function submitApplication(e) {
+                e.preventDefault();
+                // Ocultar formulario y mostrar ventana de confirmacion
+                document.getElementById('application-form-section').style.display = 'none';
+                document.getElementById('confirmation-section').style.display = 'block';
+                window.scrollTo({ top: document.getElementById('confirmation-section').offsetTop - 100, behavior: 'smooth' });
+                return false;
+            }
+        </script>
+    </main>
+
+
+
+        <footer class="footer-complex">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <img src="https://raw.githubusercontent.com/mardellop/NEXUS/main/Logo%20Nexus%20S.png" alt="NEXUS SEAMLESS" class="logo-img footer-logo-img">
+                        </div>
+                        <p class="brand-desc">El primer ordenador que elimina las pantallas rígidas y los puertos físicos. La tecnología que fluye contigo.</p>
+                        <div class="social-links">
+                            <span>Síguenos en nuestras redes sociales</span>
+                            <div class="social-icons">
+
+                                <a href="linkedin-simulator/index.html" target="_blank" rel="noopener noreferrer" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                                <a href="Instagram Simulator/index.html" target="_blank" rel="noopener noreferrer" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                                <a href="youtube-simulator/index.html" target="_blank" rel="noopener noreferrer" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <div class="footer-link-col">
+                            <h4>Quiénes somos</h4>
+                            <a href="sobre-nosotros.html">Nuestra historia</a>
+                            <a href="blog.html">Noticias</a>
+                            <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
+                        </div>
+
+                        <div class="footer-link-col">
+                            <h4>¿Necesitas ayuda?</h4>
+                            <a href="faq.html">Preguntas frecuentes</a>
+                            <a href="#">Nexusbot</a>
+                            <a href="mailto:contacto.nexuss.brand@gmail.com?subject=Consulta NEXUS SEAMLESS">Contacte con nosotros</a>
+                        </div>
+
+                        <div class="footer-link-col">
+                            <h4>Condiciones de uso</h4>
+                            <a href="privacidad.html">Avisos de privacidad del consumidor</a>
+                            <a href="terminos.html">Términos y condiciones</a>
+                            <a href="cookies.html">Configuración de cookies</a>
+                            <a href="aviso-cookies.html">Avisos de cookies</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="footer-bottom">
+                    <p>© 2026 NEXUS SEAMLESS. Todos los derechos reservados.</p>
+                    <div class="bottom-links">
+                        <a href="privacidad.html">Política de Privacidad</a>
+                        <a href="terminos.html">Términos de Servicio</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+    <script>
+
+        // Preloader hiding logic
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                }, 2000);
+            }
+        });
+
+        // Hero Slider Logic
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(n) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            
+            slideIndex = n;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.add('active');
+        }
+
+        function currentSlide(n) {
+            showSlide(n);
+        }
+
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            showSlide((slideIndex + 1) % slides.length);
+        }, 5000);
+    </script>
+    <script src="ui-sounds.js"></script>
+    <script src="reserve-modal.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

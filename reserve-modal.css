@@ -1,0 +1,259 @@
+/* Modal Backdrop */
+.reserve-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    overflow-y: scroll; /* Force scrolling if content is tall */
+    padding: 60px 20px; /* More padding at the top */
+    align-items: flex-start; /* Start from top, not center, to prevent clipping */
+}
+
+.reserve-modal-overlay.active {
+    display: flex;
+}
+
+/* Modal Content Container */
+.reserve-modal-content {
+    background: #f8fafc;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 32px;
+    position: relative;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: modalAppear 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    margin-bottom: 40px; /* Space at the bottom */
+}
+
+@keyframes modalAppear {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Close Button */
+.close-reserve-modal {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: #e2e8f0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: #475569;
+}
+
+.close-reserve-modal:hover {
+    background: #cbd5e1;
+    transform: rotate(90deg);
+}
+
+/* Reusing existing preregister styles from index.html/style.css */
+/* I will copy necessary styles here if they are not global */
+
+.prereg-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.prereg-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.prereg-header p {
+    font-size: 16px;
+    color: #64748b;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.prereg-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #e0f2fe;
+    color: #0369a1;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.prereg-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Modal specific tweaks */
+.reserve-modal-content .main-prereg-form {
+    background: white;
+    padding: 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.form-group-custom {
+    margin-bottom: 24px;
+}
+
+.form-group-custom label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon .i-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 14px 14px 14px 44px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.btn-cyan-full {
+    width: 100%;
+    padding: 16px;
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cyan-full:hover {
+    background: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.4);
+}
+
+.form-card-footer {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.b-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #1e293b;
+}
+
+.benefit-item-card {
+    display: flex;
+    gap: 16px;
+    background: white;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.b-icon-wrap {
+    width: 40px;
+    height: 40px;
+    background: #f0f9ff;
+    color: #0ea5e9;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.b-info h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.b-info p {
+    font-size: 11px;
+    color: #64748b;
+}
+
+.units-card {
+    margin-top: 40px;
+    padding: 20px;
+    background: #ecfeff;
+    border: 2px solid #22d3ee;
+    border-radius: 16px;
+}
+
+.u-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.u-header span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0e7490;
+}
+
+.u-header strong {
+    color: #0e7490;
+}
+
+.u-progress-bg {
+    background: #e2e8f0;
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.u-progress-fill {
+    background: #0891b2;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.u-footer {
+    font-size: 11px;
+    font-weight: 600;
+    color: #0891b2;
+}
+
+@media (max-width: 900px) {
+    .prereg-container { grid-template-columns: 1fr; }
+    .reserve-modal-content { padding: 40px 20px; }
+}

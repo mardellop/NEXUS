@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | NEXUS SEAMLESS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;700&family=Michroma&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            padding: 180px 24px 100px;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .about-title {
+            font-size: clamp(40px, 8vw, 60px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #111827 0%, #2e8aa3 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-intro {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #000;
+            margin-bottom: 48px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .brand-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 24px;
+            align-items: center;
+        }
+
+        .story-content h2 {
+            font-size: 36px;
+            margin-bottom: 24px;
+            color: #000;
+        }
+
+        .story-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #000;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .scroll-s-box {
+            background: rgba(6, 182, 212, 0.05);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            padding: 32px;
+            border-radius: 24px;
+            margin-top: 32px;
+        }
+
+        .s-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s-item:last-child { margin-bottom: 0; }
+
+        .s-letter {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .s-text h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #000;
+        }
+
+        .s-text p {
+            font-size: 15px;
+            margin-bottom: 0;
+            line-height: 1.5;
+            text-align: jsutify;
+        }
+
+        .visual-identity {
+            background: #000;
+            color: #fff;
+            padding: 100px 24px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .isotype-display {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .isotype-icon {
+            font-family: 'Michroma', sans-serif;
+            font-size: 60px;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .isotype-waves {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            animation: pulse-wave 3s infinite;
+        }
+
+        .isotype-waves::after {
+            content: '';
+            position: absolute;
+            top: -10px; left: -10px; right: -10px; bottom: -10px;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 50%;
+            animation: pulse-wave 3s infinite 1.5s;
+        }
+
+        @keyframes pulse-wave {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: scale(1.2); opacity: 0; }
+        }
+
+        .identity-content h2 {
+            font-size: 42px;
+            margin-bottom: 24px;
+            background: linear-gradient(90deg, #fff, var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .color-palette {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .color-item {
+            text-align: center;
+        }
+
+        .color-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .color-turquoise { background: #3cb3d3; box-shadow: 0 0 30px rgba(60, 179, 211, 0.4); }
+        .color-black { background: #111827; }
+
+        .values-section {
+            max-width: 1200px;
+            margin: 0 auto 120px;
+            padding: 0 24px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .value-card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .value-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .value-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000;
+            text-align: justify;
+        }
+
+        .moto-banner {
+            background: var(--primary);
+            padding: 80px 24px;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .moto-banner h2 {
+            font-size: 48px;
+            font-weight: 800;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 768px) {
+            .brand-story-grid { grid-template-columns: 1fr; }
+            .about-hero { padding-top: 140px; }
+            .moto-banner h2 { font-size: 32px; }
+        }
+    </style>
+    <link rel="stylesheet" href="reserve-modal.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="https://raw.githubusercontent.com/mardellop/NEXUS/main/Logo%20Nexus%20S.png" alt="NEXUS SEAMLESS" class="preloader-logo">
+            <div class="preloader-brand-name">NEXUS SEAMLESS</div>
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
+
+    <div class="bg-gradient"></div>
+    <div class="grid-overlay"></div>
+    <div class="vignette-overlay"></div>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/mardellop/NEXUS/main/Logo%20Nexus%20S.png" alt="NEXUS SEAMLESS" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="nav-item-dropdown">
+                    <a href="javascript:void(0)" style="cursor: default;">Nuestra empresa<span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sobre-nosotros.html" class="dropdown-item">Sobre nosotros</a></li>
+                        <li><a href="equipo.html" class="dropdown-item">Equipo</a></li>
+                        <li><a href="blog.html" class="dropdown-item">Noticias</a></li>
+                        <li><a href="trabaja-con-nosotros.html" class="dropdown-item">Trabaja con nostros</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="javascript:void(0)" style="cursor: default;">Producto <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="especificaciones.html" class="dropdown-item">Especificaciones</a></li>
+                        <li><a href="demo.html" class="dropdown-item">Demo</a></li>
+                        <li><a href="nexusos-core.html" class="dropdown-item">NexusOS Core</a></li>
+
+                    </ul>
+                </div>
+                <a href="blog.html">Blog</a>
+                <a href="faq.html">FAQ</a>
+                <a href="testimonios.html">Testimonios</a>
+                <a href="index.html#preregister" class="btn-primary-small">Reservar Ahora</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="about-hero">
+            <h1 class="about-title">El fin de la era de la rigidez</h1>
+            <p class="about-intro">Durante décadas, nos hemos resignado a ser nosotros quienes nos adaptamos a las máquinas. Es hora de que la tecnología fluya a nuestro alrededor.</p>
+        </section>
+
+        <!-- Historia -->
+        <section id="story" class="brand-story-grid">
+            <div class="story-content">
+                <h2>El origen de NEXUS SEAMLESS</h2>
+                <p>Alguna vez hemos buscado enchufes con la desesperación de quien busca agua en el desierto y hemos doblado nuestra espalda, nuestro cuello y nuestra propia comodidad para encajar en el ángulo rígido de una pantalla estática.</p>
+                <p>Aceptamos el ruido de una bisagra que cruje y el polvo acumulado en puertos que pronto quedarán obsoletos. En algún momento, la tecnología que prometía darnos alas se convirtió en nuestro ancla.</p>
+                <p>NEXUS SEAMLESS nació de una pregunta muy sencilla: <strong>¿Por qué un ordenador tiene que ser un bloque sólido con una estructura que se rompe?</strong> No queríamos fabricar otro ordenador más; queríamos crear un Nexus, un enlace invisible entre tus ideas y tu proyecto final.</p>
+
+                <div class="scroll-s-box">
+                    <div class="s-item">
+                        <div class="s-letter">S</div>
+                        <div class="s-text">
+                            <h4>Seamless (Sin interrupciones)</h4>
+                            <p>Donde los componentes desaparecen para formar una sola lámina unificada y perfecta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-image">
+                <img src="logo_nexus.png" alt="NEXUS SEAMLESS Isotype" style="width: 100%; height: auto; border-radius: 32px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));">
+            </div>
+        </section>
+
+        <!-- Identidad visual -->
+        <section class="visual-identity">
+            <div class="isotype-display">
+                <div class="isotype-waves"></div>
+                <div class="isotype-icon">NEXUS</div>
+            </div>
+            <div class="identity-content">
+                <h2>Nuestra promesa</h2>
+                <p style="max-width: 800px; margin: 0 auto 40px; font-size: 18px; opacity: 0.8; text-align:justify;">Decidimos que era hora de borrar la línea que separa al creador de su herramienta. Así nació el primer dispositivo que no ocupa espacio, sino que lo reclama; que no se impone al entorno, sino que fluye con él. El nombre es nuestra promesa: una conexión entre tu mente y tu trabajo que nunca más será interrumpida.</p>
+
+                <div class="color-palette">
+                    <div class="color-item">
+                        <div class="color-circle color-turquoise"></div>
+                        <span>Azul turquesa</span>
+                        <p style="font-size: 12px; opacity: 0.6; margin-top: 4px;">Energía y grafeno</p>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-circle color-black"></div>
+                        <span>Negro profundo</span>
+                        <p style="font-size: 12px; opacity: 0.6; margin-top: 4px;">Elegancia y autoridad</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valores -->
+        <section class="values-section">
+            <div class="badge" style="display: block; width: fit-content; margin: 0 auto 16px;">LO QUE NOS MUEVE</div>
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 48px; color: #000;">Nuestros valores</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Adaptabilidad</h3>
+                    <p>No esperamos que tú te ajustes al mundo; hacemos que el hardware sea lo suficientemente valiente para moldearse a ti. Si tú te mueves, tu capacidad de crear se despliega contigo, sin fricciones.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Simplicidad</h3>
+                    <p>Sabemos que eliminar es mucho más difícil que añadir. Hemos tenido el coraje de quitar los puertos, los cables y los motores mecánicos. Lo que queda es la pureza: una lámina de grafeno que contiene todo lo que necesitas y nada de lo que te sobra.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Sostenibilidad</h3>
+                    <p>Nos rebelamos contra la cultura del usar y tirar. Al elegir titanio y grafeno, no estamos fabricando productos; estamos forjando compañeros de viaje diseñados para envejecer contigo durante décadas.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Transparencia material</h3>
+                    <p>No ocultamos nuestra ingeniería tras capas de plástico. Mostramos con orgullo nuestros circuitos moleculares porque creemos que la ciencia aplicada es la forma más honesta de arte.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Misión -->
+        <section style="max-width: 900px; margin: 0 auto 100px; padding: 0 24px; text-align: center;">
+            <div class="badge" style="display: inline-block; margin-bottom: 24px;">NUESTRA MISIÓN</div>
+            <h2 style="font-size: 36px; margin-bottom: 32px; color: #000;">Queremos disolver las barreras físicas que limitan tu capacidad de crear</h2>
+            <p style="font-size: 18px; line-height: 1.8; color: #000; margin-bottom: 20px; text-align: justify;">En NEXUS SEAMLESS, trabajamos para que el concepto de "llevar la oficina a cuestas" sea una anécdota del pasado que contarás con una sonrisa. Nuestra meta es convertir el mundo en tu lienzo: una pared de cristal en Singapur, una mesa de madera en Berlín o el respaldo de un avión a diez mil metros de altura.</p>
+            <p style="font-size: 18px; line-height: 1.8; color: #000; text-align: justify;">Cualquier superficie es, ahora, un portal de 8K listo para recibir tus ideas. Existimos para que dejes de adaptar tu vida a tus dispositivos. Es hora de que, por fin, sientas cómo la tecnología realmente fluye a tu alrededor.</p>
+        </section>
+
+        
+
+        <!-- Banner lema -->
+        <section class="moto-banner">
+            <h2>Deja de doblar tu realidad</h2>
+<h2>EMPIEZA A ENROLLARLA</h2>
+        </section>
+
+    </main>
+
+        <footer class="footer-complex">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <img src="https://raw.githubusercontent.com/mardellop/NEXUS/main/Logo%20Nexus%20S.png" alt="NEXUS SEAMLESS" class="logo-img footer-logo-img">
+                        </div>
+                        <p class="brand-desc">El primer ordenador que elimina las pantallas rígidas y los puertos físicos. La tecnología que fluye contigo.</p>
+                        <div class="social-links">
+                            <span>Síguenos en nuestras redes sociales</span>
+                            <div class="social-icons">
+
+                                <a href="linkedin-simulator/index.html" target="_blank" rel="noopener noreferrer" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                                <a href="Instagram Simulator/index.html" target="_blank" rel="noopener noreferrer" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                                <a href="youtube-simulator/index.html" target="_blank" rel="noopener noreferrer" class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <div class="footer-link-col">
+                            <h4>Quiénes somos</h4>
+                            <a href="sobre-nosotros.html">Nuestra historia</a>
+                            <a href="blog.html">Noticias</a>
+                            <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
+                        </div>
+
+                        <div class="footer-link-col">
+                            <h4>¿Necesitas ayuda?</h4>
+                            <a href="faq.html">Preguntas frecuentes</a>
+                            <a href="#">Nexusbot</a>
+                            <a href="mailto:contacto.nexuss.brand@gmail.com?subject=Consulta NEXUS SEAMLESS">Contacte con nosotros</a>
+                        </div>
+
+                        <div class="footer-link-col">
+                            <h4>Condiciones de uso</h4>
+                            <a href="privacidad.html">Avisos de privacidad del consumidor</a>
+                            <a href="terminos.html">Términos y condiciones</a>
+                            <a href="cookies.html">Configuración de cookies</a>
+                            <a href="aviso-cookies.html">Avisos de cookies</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="footer-bottom">
+                    <p>© 2026 NEXUS SEAMLESS. Todos los derechos reservados.</p>
+                    <div class="bottom-links">
+                        <a href="privacidad.html">Política de Privacidad</a>
+                        <a href="terminos.html">Términos de Servicio</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+    <script>
+
+        // Preloader hiding logic
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                }, 2000);
+            }
+        });
+
+        // Hero Slider Logic
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(n) {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            
+            slideIndex = n;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.add('active');
+        }
+
+        function currentSlide(n) {
+            showSlide(n);
+        }
+
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            showSlide((slideIndex + 1) % slides.length);
+        }, 5000);
+    </script>
+    <script src="ui-sounds.js"></script>
+    <script src="reserve-modal.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
