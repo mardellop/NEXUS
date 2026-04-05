@@ -37,4 +37,25 @@
             playClick();
         }
     });
+
+    // El navegador requiere interacción humana antes de reproducir sonidos de UI
+    const startAudioContext = () => {
+        if (!audioCtx) {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        
+        if (audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+        
+        // Limpiamos listeners una vez que el contexto está listo
+        ['mousedown', 'click', 'touchstart'].forEach(event => {
+            document.removeEventListener(event, startAudioContext);
+        });
+    };
+
+    // Activamos el contexto de audio con la primera interacción para los sonidos de clic
+    ['mousedown', 'click', 'touchstart'].forEach(event => {
+        document.addEventListener(event, startAudioContext, { once: true });
+    });
 })();
